@@ -17,7 +17,7 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [
-      pkgs.my-packages.gx52
+      (pkgs.callPackage ../pkgs/gx52 { })
     ];
 
     # Create plugdev group if it doesn't exist
